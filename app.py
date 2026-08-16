@@ -723,12 +723,22 @@ if __name__ == "__main__":
     print("=" * 60)
 
 
+   if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+
+    print("=" * 60)
+    print("🤖 MALIYA AI WEB SERVER")
+    print("🌐 Maliya AI is starting...")
+    print("🔐 Firebase Authentication: ON")
+    print("💬 Chat API: ON")
+    print("🧠 User Memory: ON")
+    print("🔊 Sinhala TTS: ON")
+    print("🎙️ Voice:", TTS_VOICE)
+    print("🤖 Gemini Model:", MODEL)
+    print("=" * 60)
+
     app.run(
-
-        host="127.0.0.1",
-
-        port=5000,
-
-        debug=True
-
+        host="0.0.0.0",
+        port=port,
+        debug=False
     )
